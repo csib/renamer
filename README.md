@@ -5,8 +5,8 @@ I have faced a problem when try to upload files to OneDrive with my Synology NAS
 
 This program will rename and strip out the not valid characters. (See 12th line in code.)
 
-How to run?
-From command prompt in Linux type:
+How to run?<br/>
+From command prompt in Linux type:<br/>
 python3 main.py
 
 I windows you have to install Python3, then to the same.
