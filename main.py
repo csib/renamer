@@ -46,5 +46,5 @@ def walkfilesystem(dirroot):
 
 if __name__ == "__main__":
     # You have to adjust it to your desired root directory.
-    walkfilesystem('C:\\files') # For testing in Windows.
-    # walkfilesystem('/volume1/Public/')
+    walkfilesystem('C:\\files')  # For Windows.
+    # walkfilesystem('/volume1/foldername/') # For Linux
