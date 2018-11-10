@@ -8,7 +8,8 @@ def rename_path(root, path):
 
 
 def renamer_regex(name):
-    return re.sub('[^\wa-zA-ZöüóőúéáűÜÓŐÚÉÁŰ. ]', '', name)
+    # Valid characters.
+    return re.sub('[^\wa-zA-ZöüóőúéáűÜÓŐÚÉÁŰ. 0-9]', '', name)
 
 
 def walkfilesystem(dirroot):
@@ -38,10 +39,12 @@ def walkfilesystem(dirroot):
                     fajl += 1
                 except Exception as e:
                     print(e)
+    # TODO: These are not valid values, it returns with the folders/files which we were scanned.
     print('Folders renamed: {}'.format(mappa))
     print('Files renamed: {}'.format(fajl))
 
 
 if __name__ == "__main__":
-    walkfilesystem('C:\\files')
+    # You have to adjust it to your desired root directory.
+    walkfilesystem('C:\\files') # For testing in Windows.
     # walkfilesystem('/volume1/Public/')
